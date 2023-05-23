@@ -1,0 +1,65 @@
+{
+  "name": "wisewe-ems-web",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "cz": "git add . && git-cz",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "prettier": "prettier --write ./**/**/*.{js,css,scss,vue}"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.1.2",
+    "axios": "^1.4.0",
+    "element-plus": "^2.3.4",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.36",
+    "postcss-import": "^15.1.0",
+    "print-js": "^1.6.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-mpa": "^1.1.4",
+    "vite-plugin-windicss": "^1.9.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "autoprefixer": "^10.4.14",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.13.0",
+    "husky": "^8.0.3",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard-scss": "^6.0.0",
+    "stylelint-scss": "^5.0.0",
+    "vite": "^3.0.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run prettier"
+    }
+  }
+}

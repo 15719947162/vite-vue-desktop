@@ -1,0 +1,231 @@
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable shorthand-property-no-redundant-values */
+/* stylelint-disable selector-class-pattern */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind text;
+@tailwind ring;
+@tailwind tracking;
+
+:root {
+    /* 基色 */
+    --wisewe-base-color: #409eff;
+    --wisewe-black-light: #030303;
+    --wisewe-white-light: var(--el-color-white);
+    --wisewe-transparent-light: transparent;
+    /* 圆角 */
+    --wisewe-base-border-radius: 4px;
+    /* 文字权重 */
+    --wisewe-fw-bold: bold;
+    /* 长度 */
+    --wisewe-input-default: 200px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* element-plus 扩展样式 */
+.search-form .el-form-item {
+    margin-bottom: 8px !important;
+}
+
+.search-form .el-form-item.next-no-label {
+    margin-right: 0.5rem !important;
+}
+
+.el-dialog {
+    --el-dialog-border-radius: var(--wisewe-base-border-radius) !important;
+}
+
+.el-dialog__header {
+    background-color: var(--wisewe-base-color);
+    margin-right: 0 !important;
+    border-radius: var(--wisewe-base-border-radius) var(--wisewe-base-border-radius) 0 0;
+    line-height: 16px;
+}
+
+.el-dialog__title {
+    color: var(--wisewe-white-light) !important;
+    font-weight: var(--wisewe-fw-bold);
+}
+
+.el-overlay {
+    background-color: var(--wisewe-transparent-light) !important;
+}
+
+i.el-icon.el-dialog__close:hover {
+    color: var(--el-color-white);
+}
+
+button.el-dialog__headerbtn:hover {
+    color: var(--el-color-white);
+}
+
+.el-dialog {
+    text-align: left;
+    border-radius: var(--wisewe-base-border-radius);
+    box-shadow: 0 0 20px 0 darkgrey;
+}
+
+.el-dialog > .el-dialog__header {
+    height: 50px;
+    line-height: 14px;
+    padding: 12px 8px;
+    margin-right: 0;
+    position: relative;
+    /*
+    element弹出框的header背景颜色
+    */
+    background-color: var(--el-color-primary);
+    border-bottom: 1px solid #dfdfdf;
+    border-top-right-radius: var(--wisewe-base-border-radius);
+    border-top-left-radius: var(--wisewe-base-border-radius);
+}
+
+.el-dialog .el-dialog__title,
+.el-dialog .el-dialog__headerbtn .el-dialog__close {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--el-color-white) !important;
+}
+
+.el-dialog .el-dialog__title {
+    padding-left: 4px;
+}
+
+.el-dialog .el-dialog__headerbtn {
+    top: 16px;
+    right: 14px;
+    width: 16px;
+    height: 16px;
+}
+
+.el-dialog .el-dialog__headerbtn .el-dialog__close {
+    color: #ebebeb;
+    vertical-align: top;
+}
+
+.el-dialog > .el-dialog__body {
+    flex: 1;
+    overflow: auto;
+    padding: 12px 12px 20px 12px !important;
+}
+
+.el-dialog > .el-dialog__footer {
+    height: 46px;
+    line-height: 20px;
+    padding: 6px;
+    background-color: #fafafa;
+    border-top: 1px solid #dfdfdf;
+    border-bottom-right-radius: var(--wisewe-base-border-radius);
+    border-bottom-left-radius: var(--wisewe-base-border-radius);
+}
+
+.el-dialog .dialog-footer {
+    margin-right: 10px;
+}
+
+.v-modal {
+    opacity: 0.3;
+}
+
+.el-pager li.is-active {
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.el-loading-spinner .el-loading-text {
+    color: var(--el-color-white) !important;
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* 自定义 */
+.w-btns {
+    width: 100%;
+    height: 48px;
+    overflow: hidden;
+    border-top: 1px solid #efefef;
+    padding: 8px 0;
+}
+
+.w-table-wrapper {
+    border-top: 1px solid #efefef;
+    width: 100%;
+    height: calc(100% - 89px);
+    overflow: hidden;
+}
+
+.w-table-no-btn-wrapper {
+    border-top: 1px solid #efefef;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+.w-pagination {
+    margin: 4px 0;
+}
+
+.w-suo {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.w-operation {
+    text-align: center;
+}
+
+/* ===============输入框================ */
+.w-input-140 {
+    width: 140px !important;
+}
+
+.w-input-200 {
+    width: 200px !important;
+}
+
+/* ==============点 状态============== */
+.is-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #efefef;
+    border-radius: 6px;
+    position: relative;
+    top: -2px;
+    margin-right: 3px;
+}
+
+.is-active {
+    background-color: var(--el-color-primary);
+    box-shadow: 0 0 1px 1px var(--el-color-primary);
+}
+
+.is-disabled {
+    background-color: var(--el-text-color-disabled);
+    box-shadow: 0 0 1px 1px var(--el-text-color-disabled);
+}
+
+.is-locked,
+.is-fail-submit {
+    background-color: var(--el-color-danger);
+    box-shadow: 0 0 1px 1px var(--el-color-danger);
+}
+
+.is-to-submit {
+    background-color: var(--el-color-warning);
+    box-shadow: 0 0 1px 1px var(--el-color-warning);
+}
+
+.is-submited {
+    background-color: var(--el-color-success);
+    box-shadow: 0 0 1px 1px var(--el-color-success);
+}
